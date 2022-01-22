@@ -26,5 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm init
     - run: npm i -g @redocly/openapi-cli@latest
     - run: openapi lint docs/openapi.yml
